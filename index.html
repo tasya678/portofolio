@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biodata Fantasi - Anastasya Dwi Armandha</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {margin:0;font-family:'Roboto',sans-serif;background:linear-gradient(180deg,#3d2b57,#2b1d35);color:#f0e6ff;}
+    header{text-align:center;padding:30px;background:rgba(255,255,255,0.05);box-shadow:0 4px 20px rgba(0,0,0,0.4);}
+    header img{width:120px;height:120px;border-radius:50%;border:4px solid #fff;object-fit:cover;}
+    header h1{margin:15px 0 5px;font-size:26px;color:#ffe3a3;}
+    header p{font-style:italic;color:#cbbde2;}
+    main{max-width:1000px;margin:20px auto;padding:20px;display:grid;grid-template-columns:2fr 1fr;gap:20px;}
+    section{background:rgba(255,255,255,0.08);padding:20px;border-radius:12px;margin-bottom:20px;}
+    h2{margin-top:0;font-size:20px;color:#ffd891;}
+    table{width:100%;border-collapse:collapse;margin-top:10px;}
+    th,td{padding:10px;border-bottom:1px solid rgba(255,255,255,0.2);}
+    th{text-align:left;color:#ffe3a3;}
+    .chart-container{width:100%;margin-top:15px;}
+    .button-group{display:flex;gap:10px;margin:15px;justify-content:center;}
+    button{background:#6a4fa3;border:none;padding:8px 14px;border-radius:8px;color:#fff;cursor:pointer;transition:background 0.3s;}
+    button:hover{background:#8a6cd1;}
+  </style>
+</head>
+<body>
+  <header>
+    <img id="profile-pic" src="profil.jpg" alt="Foto Anastasya">
+    <h1 id="name">Anastasya Dwi Armandha</h1>
+    <p id="motto">“Hidup adalah perjalanan, nikmati setiap langkahnya”</p>
+  </header>
+
+  <div class="button-group">
+    <button onclick="setLang('id')">Indonesia</button>
+    <button onclick="setLang('en')">English</button>
+    <button onclick="setLang('jv')">Jawa</button>
+    <button onclick="setLang('ar')">العربية</button>
+  </div>
+
+  <main>
+    <div>
+      <section>
+        <h2 id="bio-title">Biodata</h2>
+        <table>
+          <tr><th id="lbl-nama">Nama</th><td id="val-nama">Anastasya Dwi Armandha</td></tr>
+          <tr><th id="lbl-ttl">TTL</th><td id="val-ttl">Pekalongan, 7 Juni 2009</td></tr>
+          <tr><th id="lbl-alamat">Alamat</th><td id="val-alamat">Desa Silir RT 08 RW 09, Tirto, Pekalongan</td></tr>
+          <tr><th id="lbl-jk">Jenis Kelamin</th><td id="val-jk">Perempuan</td></tr>
+          <tr><th id="lbl-agama">Agama</th><td id="val-agama">Islam</td></tr>
+          <tr><th id="lbl-wn">Kewarganegaraan</th><td id="val-wn">Indonesia</td></tr>
+          <tr><th id="lbl-status">Status</th><td id="val-status">Pelajar</td></tr>
+          <tr><th id="lbl-hp">No. HP</th><td id="val-hp">08156797xxxx</td></tr>
+          <tr><th id="lbl-email">Email</th><td id="val-email">tasyaxxxxxx@gmail.com</td></tr>
+        </table>
+      </section>
+
+      <section>
+        <h2 id="edu-title">Pendidikan</h2>
+        <ul id="edu-list">
+          <li class="edu-item1">SDN 01 Silirejo (2015-2021)</li>
+          <li class="edu-item2">MTS NU Karanganyar Tirto (2021-2024)</li>
+          <li class="edu-item3">SMK Ma'arif NU Tirto (2024)</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="skill-title">Keahlian</h2>
+        <ul id="skill-list">
+          <li class="skill-item1">Manajemen Emosi dan Stres</li>
+          <li class="skill-item2">Desain grafis dengan Canva</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="exp-title">Riwayat Hidup / Pengalaman</h2>
+        <ul id="exp-list">
+          <li class="exp-item1">Mengikuti Ekstrakurikuler PMR di MTS</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="prestasi-title">Prestasi</h2>
+        <ul id="prestasi-list">
+          <li class="prestasi-item1">Juara 3 lomba dekte</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="cita-title">Cita-cita</h2>
+        <ul id="cita-list">
+          <li class="cita-item1">Menjadi pengacara</li>
+          <li class="cita-item2">Ingin berkontribusi di bidang hukum</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="port-title">Portofolio Keahlian</h2>
+        <ul id="port-list">
+          <li class="port-item1">Desain poster kegiatan sekolah</li>
+          <li class="port-item2">Membuat presentasi kreatif dengan Canva</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 id="journey-title">Perjalanan Hidup</h2>
+        <p id="journey-text">Sejak kecil tinggal di Pekalongan, bersekolah di SDN 01 Silirejo, kemudian melanjutkan pendidikan di MTS NU Karanganyar Tirto, dan kini bersekolah di SMK Ma'arif NU Tirto.</p>
+      </section>
+
+      <section>
+        <h2 id="future-title">Harapan Masa Depan</h2>
+        <p id="future-text">Ingin menjadi pribadi yang bermanfaat, sukses dalam karir, membahagiakan orang tua, serta berkontribusi positif bagi masyarakat.</p>
+      </section>
+
+      <section>
+        <h2 id="statistik-title">Statistik Kegiatan</h2>
+        <div class="chart-container">
+          <canvas id="barChart"></canvas>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="hobi-title">Hobi</h2>
+        <div class="chart-container">
+          <canvas id="pieChart"></canvas>
+        </div>
+      </section>
+
+      <section>
+        <h2 id="analisis-title">Analisis</h2>
+        <table id="analisis-table">
+          <tr><th id="analisis-kategori">Kategori Data</th><th id="analisis-deskripsi">Deskripsi</th></tr>
+          <tr><td id="analisis-hobi">Hobi</td><td id="analisis-hobi-val">Nonton film (3x/minggu), Mendengar musik (7x/minggu), Membaca novel (5x/minggu)</td></tr>
+          <tr><td id="analisis-prestasi">Prestasi</td><td id="analisis-prestasi-val">Total: 1 </td></tr>
+          <tr><td id="analisis-kegiatan">Kegiatan Mingguan</td><td id="analisis-kegiatan-val">Rata-rata 4-5 kegiatan/hari</td></tr>
+        </table>
+        <p id="analisis-calc"><strong>Perhitungan:</strong><br>Rata-rata 4-5 kegiatan/hari. Modus hobi: Musik (7x/minggu).</p>
+        <p id="analisis-conc"><strong>Kesimpulan:</strong><br>Hobi membaca menunjukkan minat hiburan visual. Jadwal padat, 4–5 kegiatan/hari.</p>
+      </section>
+    </div>
+  </main>
+
+  <script>
+    // Centralized multilingual data. Keys match element IDs where possible.
+    const dict = {
+      id: {
+        "name":"Anastasya Dwi Armandha",
+        "motto":"Hidup adalah perjalanan, nikmati setiap langkahnya",
+        "bio-title":"Biodata",
+        "lbl-nama":"Nama","val-nama":"Anastasya Dwi Armandha",
+        "lbl-ttl":"TTL","val-ttl":"Pekalongan, 7 Juni 2009",
+        "lbl-alamat":"Alamat","val-alamat":"Desa Silir RT 08 RW 09, Tirto, Pekalongan",
+        "lbl-jk":"Jenis Kelamin","val-jk":"Perempuan",
+        "lbl-agama":"Agama","val-agama":"Islam",
+        "lbl-wn":"Kewarganegaraan","val-wn":"Indonesia",
+        "lbl-status":"Status","val-status":"Pelajar",
+        "lbl-hp":"No. HP","val-hp":"08156797xxxx",
+        "lbl-email":"Email","val-email":"tasyaxxxxxxxx@gmail.com",
+
+        "edu-title":"Pendidikan",
+        "edu-list":["SDN 01 Silirejo (2015-2021)","MTS NU Karanganyar Tirto (2021-2024)","SMK Ma'arif NU Tirto (2024)"],
+
+        "skill-title":"Keahlian",
+        "skill-list":["Manajemen Emosi dan Stres","Desain grafis dengan Canva"],
+
+        "exp-title":"Riwayat Hidup / Pengalaman",
+        "exp-list":["Mengikuti Ekstrakurikuler PMR di MTS"],
+
+        "prestasi-title":"Prestasi",
+        "prestasi-list":["Juara 3 lomba dekte"],
+
+        "cita-title":"Cita-cita",
+        "cita-list":["Menjadi pengacara","Ingin berkontribusi di bidang hukum"],
+
+        "port-title":"Portofolio Keahlian",
+        "port-list":["Desain poster kegiatan sekolah","Membuat presentasi kreatif dengan Canva"],
+
+        "journey-title":"Perjalanan Hidup",
+        "journey-text":"Sejak kecil tinggal di Pekalongan, bersekolah di SDN 01 Silirejo, kemudian melanjutkan pendidikan di MTS NU Karanganyar Tirto, dan kini bersekolah di SMK Ma'arif NU Tirto.",
+
+        "future-title":"Harapan Masa Depan",
+        "future-text":"Ingin menjadi pribadi yang bermanfaat, sukses dalam karir, membahagiakan orang tua, serta berkontribusi positif bagi masyarakat.",
+
+        "statistik-title":"Statistik Kegiatan",
+        "barChart":{ "labels":["Tidur","Sekolah","Belajar","Hobi","Sosialisasi","Lain-lain"], "data":[8,6,2,3,1,4] },
+
+        "hobi-title":"Hobi",
+        "pieChart":{ "labels":["Membaca Novel 50%","Musik 20%","Film 30%"], "data":[50,20,30] },
+
+        "analisis-title":"Analisis",
+        "analisis-table":[
+          ["Kategori Data","Deskripsi"],
+          ["Hobi","Nonton film (3x/minggu), Mendengar musik (7x/minggu), Membaca novel (5x/minggu)"],
+          ["Prestasi","Total: 1"],
+          ["Kegiatan Mingguan","Rata-rata 4-5 kegiatan/hari"]
+        ],
+        "analisis-calc":"Perhitungan: Rata-rata 4-5 kegiatan/hari. Modus hobi: Musik (7x/minggu).",
+        "analisis-conc":"Kesimpulan: Hobi membaca menunjukkan minat hiburan visual. Jadwal padat, 4–5 kegiatan/hari."
+      },
+
+      en: {
+        "name":"Anastasya Dwi Armandha",
+        "motto":"Life is a journey, enjoy every step",
+        "bio-title":"Personal Information",
+        "lbl-nama":"Name","val-nama":"Anastasya Dwi Armandha",
+        "lbl-ttl":"Place, Date of Birth","val-ttl":"Pekalongan, June 7, 2009",
+        "lbl-alamat":"Address","val-alamat":"Silir Village RT 08 RW 09, Tirto, Pekalongan",
+        "lbl-jk":"Gender","val-jk":"Female",
+        "lbl-agama":"Religion","val-agama":"Islam",
+        "lbl-wn":"Nationality","val-wn":"Indonesia",
+        "lbl-status":"Status","val-status":"Student",
+        "lbl-hp":"Phone","val-hp":"08156797xxxx",
+        "lbl-email":"Email","val-email":"tasyaxxxxxxxx@gmail.com",
+
+        "edu-title":"Education",
+        "edu-list":["SDN 01 Silirejo (2015-2021)","MTS NU Karanganyar Tirto (2021-2024)","SMK Ma'arif NU Tirto (2024)"],
+
+        "skill-title":"Skills",
+        "skill-list":["Emotional and Stress Management","Graphic Design with Canva"],
+
+        "exp-title":"Experience",
+        "exp-list":["Joined PMR extracurricular at MTS"],
+
+        "prestasi-title":"Achievements",
+        "prestasi-list":["3rd place in dictation contest"],
+
+        "cita-title":"Dreams",
+        "cita-list":["Become a lawyer","Contribute in the field of law"],
+
+        "port-title":"Skills Portfolio",
+        "port-list":["Designed school event posters","Created creative presentations with Canva"],
+
+        "journey-title":"Life Journey",
+        "journey-text":"Since childhood lived in Pekalongan, studied at SDN 01 Silirejo, continued at MTS NU Karanganyar Tirto, and now studying at SMK Ma'arif NU Tirto.",
+
+        "future-title":"Future Hopes",
+        "future-text":"Wants to be a useful person, succeed in career, make parents happy, and contribute positively to society.",
+
+        "statistik-title":"Activity Statistics",
+        "barChart":{ "labels":["Sleep","School","Study","Hobbies","Socializing","Others"], "data":[8,6,2,3,1,4] },
+
+        "hobi-title":"Hobbies",
+        "pieChart":{ "labels":["Reading Novels 50%","Music 20%","Movies 30%"], "data":[50,20,30] },
+
+        "analisis-title":"Analysis",
+        "analisis-table":[
+          ["Data Category","Description"],
+          ["Hobbies","Watching movies (3x/week), Music (7x/week), Reading novels (5x/week)"],
+          ["Achievements","Total: 1"],
+          ["Weekly Activities","Average 4-5 activities/day"]
+        ],
+        "analisis-calc":"Calculation: Average 4-5 activities/day. Mode hobby: Music (7x/week).",
+        "analisis-conc":"Conclusion: Busy schedule, dominant hobby listening to music."
+      },
+
+      jv: {
+        "name":"Anastasya Dwi Armandha",
+        "motto":"Urip iku lelampahan, nikmati saben jangkah",
+        "bio-title":"ꦧꦶꦲꦺꦴꦢꦶꦲ (Biodata)",
+        "lbl-nama":"Nama","val-nama":"Anastasya Dwi Armandha",
+        "lbl-ttl":"Panggonan, Tanggal Lair","val-ttl":"Pekalongan, 7 Juni 2009",
+        "lbl-alamat":"Alamat","val-alamat":"Desa Silir RT 08 RW 09, Tirto, Pekalongan",
+        "lbl-jk":"Jenis Kelamin","val-jk":"Perempuan",
+        "lbl-agama":"Agama","val-agama":"Islam",
+        "lbl-wn":"Kewarganegaraan","val-wn":"Indonesia",
+        "lbl-status":"Status","val-status":"Pelajar",
+        "lbl-hp":"No. HP","val-hp":"08156797xxxx",
+        "lbl-email":"Email","val-email":"tasyaxxxxx@gmail.com",
+
+        "edu-title":"Pendidikan",
+        "edu-list":["SDN 01 Silirejo (2015-2021)","MTS NU Karanganyar Tirto (2021-2024)","SMK Ma'arif NU Tirto (2024)"],
+
+        "skill-title":"Keahlian",
+        "skill-list":["Manajemen Emosi lan Stres","Desain grafis nganggo Canva"],
+
+        "exp-title":"Riwayat / Pengalaman",
+        "exp-list":["Melbu ekstrakurikuler PMR ing MTS"],
+
+        "prestasi-title":"Prestasi",
+        "prestasi-list":["Juara 3 lomba dekte"],
+
+        "cita-title":"Cita-cita",
+        "cita-list":["Dadi pengacara","Arep nyumbang ing bidang hukum"],
+
+        "port-title":"Portofolio Keahlian",
+        "port-list":["Desain poster kegiatan sekolah","Nggawe presentasi kreatif nganggo Canva"],
+
+        "journey-title":"Perjalanan Hidup",
+        "journey-text":"Saka cilik urip ing Pekalongan, sinau ing SDN 01 Silirejo, nerusake ing MTS NU Karanganyar Tirto, saiki sekolah ing SMK Ma'arif NU Tirto.",
+
+        "future-title":"Harapan Masa Depan",
+        "future-text":"Kepingin dadi wong migunani, sukses ing karir, nggawé seneng wong tuwa, lan nyumbang kanggo masyarakat.",
+
+        "statistik-title":"Statistik Kegiatan",
+        "barChart":{ "labels":["Turu","Sekolah","Sinau","Hobi","Sosialisasi","Liyane"], "data":[8,6,2,3,1,4] },
+
+        "hobi-title":"Hobi",
+        "pieChart":{ "labels":["Maca Novel 50%","Musik 20%","Film 30%"], "data":[50,20,30] },
+
+        "analisis-title":"Analisis",
+        "analisis-table":[
+          ["Kategori","Deskripsi"],
+          ["Hobi","Nonton film (3x/minggu), Musik (7x/minggu), Maca novel (5x/minggu)"],
+          ["Prestasi","Total: 1"],
+          ["Kegiatan Mingguan","Rata-rata 4-5 kegiatan/dina"]
+        ],
+        "analisis-calc":"Perhitungan: Rata-rata 4-5 kegiatan/dina. Modus hobi: Musik (7x/minggu).",
+        "analisis-conc":"Kesimpulan: Jadwal padhet, hobi dominan ngrungokake musik."
+      },
+
+      ar: {
+        "name":"أنستاسيا دوي أرمنده",
+        "motto":"الحياة رحلة، استمتع بكل خطوة",
+        "bio-title":"البيانات الشخصية",
+        "lbl-nama":"الاسم","val-nama":"أنستاسيا دوي أرمنده",
+        "lbl-ttl":"مكان وتاريخ الميلاد","val-ttl":"بكالونجان، 7 يونيو 2009",
+        "lbl-alamat":"العنوان","val-alamat":"قرية سيلجو RT 08 RW 09، تيرتو، بكالونجان",
+        "lbl-jk":"الجنس","val-jk":"أنثى",
+        "lbl-agama":"الدين","val-agama":"الإسلام",
+        "lbl-wn":"الجنسية","val-wn":"إندونيسيا",
+        "lbl-status":"الحالة","val-status":"طالبة",
+        "lbl-hp":"رقم الهاتف","val-hp":"08156797xxxx",
+        "lbl-email":"البريد الإلكتروني","val-email":"tasyaxxxxxx@gmail.com",
+
+        "edu-title":"التعليم",
+        "edu-list":["مدرسة SDN 01 سيليرجو (2015-2021)","مدرسة MTS NU كارنجأنير تيرتو (2021-2024)","مدرسة SMK معارف NU تيرتو (2024)"],
+
+        "skill-title":"المهارات",
+        "skill-list":["إدارة العاطفة والتوتر","تصميم جرافيك باستخدام Canva"],
+
+        "exp-title":"الخبرات",
+        "exp-list":["الانضمام إلى نشاط PMR في MTS"],
+
+        "prestasi-title":"الإنجازات",
+        "prestasi-list":["المركز الثالث في مسابقة الإملاء"],
+
+        "cita-title":"الأحلام",
+        "cita-list":["أن أصبح محامية","المساهمة في مجال القانون"],
+
+        "port-title":"ملف المهارات",
+        "port-list":["تصميم ملصقات أنشطة المدرسة","إعداد عروض إبداعية باستخدام Canva"],
+
+        "journey-title":"مسيرة الحياة",
+        "journey-text":"منذ الطفولة عاشت في بكالونجان، درست في SDN 01 سيليرجو، ثم تابعت في MTS NU كارنجأنير تيرتو، وهي الآن تدرس في SMK معارف NU تيرتو.",
+
+        "future-title":"آمال المستقبل",
+        "future-text":"أن تكون شخصية نافعة، تحقق النجاح في العمل، تُسعد الوالدين، وتساهم بشكل إيجابي في المجتمع.",
+
+        "statistik-title":"إحصائيات الأنشطة",
+        "barChart":{ "labels":["النوم","المدرسة","الدراسة","الهوايات","الاجتماع","أخرى"], "data":[8,6,2,3,1,4] },
+
+        "hobi-title":"الهوايات",
+        "pieChart":{ "labels":["قراءة الروايات 50%","الموسيقى 20%","الأفلام 30%"], "data":[50,20,30] },
+
+        "analisis-title":"التحليل",
+        "analisis-table":[
+          ["الفئة","الوصف"],
+          ["الهوايات","مشاهدة الأفلام (3x/أسبوع)، الموسيقى (7x/أسبوع)، قراءة الروايات (5x/أسبوع)"],
+          ["الإنجازات","المجموع: 1"],
+          ["الأنشطة الأسبوعية","متوسط 4-5 أنشطة/يوم"]
+        ],
+        "analisis-calc":"الحساب: متوسط 4-5 أنشطة/يوم. أكثر هواية: الموسيقى (7x/أسبوع).",
+        "analisis-conc":"النتيجة: جدول مزدحم، الهواية السائدة الاستماع للموسيقى."
+      }
+    };
+
+    // Chart instances (will be created/updated by setLang)
+    let barChart = null;
+    let pieChart = null;
+
+    function buildList(elId, items) {
+      const el = document.getElementById(elId);
+      if (!el) return;
+      el.innerHTML = '';
+      items.forEach(item => {
+        const li = document.createElement('li');
+        li.textContent = item;
+        el.appendChild(li);
+      });
+    }
+
+    function buildAnalisisTable(tableId, rows) {
+      const table = document.getElementById(tableId);
+      if (!table) return;
+      table.innerHTML = '';
+      rows.forEach((row, idx) => {
+        const tr = document.createElement('tr');
+        row.forEach((cell, cidx) => {
+          const cellEl = (idx === 0) ? document.createElement('th') : document.createElement('td');
+          cellEl.textContent = cell;
+          tr.appendChild(cellEl);
+        });
+        table.appendChild(tr);
+      });
+    }
+
+    function updateBarChart(labels, data) {
+      const ctx = document.getElementById('barChart').getContext('2d');
+      if (barChart) {
+        barChart.data.labels = labels;
+        barChart.data.datasets[0].data = data;
+        barChart.update();
+      } else {
+        barChart = new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: labels,
+            datasets: [{ label: '', data: data, backgroundColor: '#8a6cd1' }]
+          },
+          options: { scales: { y: { beginAtZero: true } }, responsive: true }
+        });
+      }
+    }
+
+    function updatePieChart(labels, data) {
+      const ctx = document.getElementById('pieChart').getContext('2d');
+      if (pieChart) {
+        pieChart.data.labels = labels;
+        pieChart.data.datasets[0].data = data;
+        pieChart.update();
+      } else {
+        pieChart = new Chart(ctx, {
+          type: 'pie',
+          data: { labels: labels, datasets: [{ data: data, backgroundColor: ['#ffb347','#ff6961','#77dd77','#779ecb'] }] },
+          options: { responsive: true }
+        });
+      }
+    }
+
+    // The global function referenced by the buttons. This fixes the ReferenceError.
+    function setLang(lang) {
+      const t = dict[lang];
+      if (!t) { console.warn('Language not found:', lang); return; }
+
+      // First pass: set simple text and values for elements that match keys
+      Object.keys(t).forEach(key => {
+        const val = t[key];
+        const el = document.getElementById(key);
+
+        // Special handling for arrays (lists) and tables
+        if (Array.isArray(val)) {
+          // If element exists and is a UL/OL: build list
+          if (el && (el.tagName === 'UL' || el.tagName === 'OL')) {
+            el.innerHTML = '';
+            val.forEach(item => {
+              const li = document.createElement('li');
+              li.textContent = item;
+              el.appendChild(li);
+            });
+          }
+          return; // handled
+        }
+
+        // Skip chart objects here; handled below
+        if (val && typeof val === 'object' && (key === 'barChart' || key === 'pieChart')) return;
+        if (val && typeof val === 'object' && key === 'analisis-table') return;
+
+        if (el) {
+          // allow HTML for certain fields (analysis paragraphs)
+          if (key === 'analisis-calc' || key === 'analisis-conc') {
+            el.innerHTML = val;
+          } else {
+            el.textContent = val;
+          }
+        }
+      });
+
+      // Build analysis table if present
+      if (t['analisis-table']) {
+        buildAnalisisTable('analisis-table', t['analisis-table']);
+      }
+
+      // Update charts
+      if (t.barChart) updateBarChart(t.barChart.labels, t.barChart.data);
+      if (t.pieChart) updatePieChart(t.pieChart.labels, t.pieChart.data);
+
+      // Populate lists if provided as specially named arrays
+      if (t['edu-list']) buildList('edu-list', t['edu-list']);
+      if (t['skill-list']) buildList('skill-list', t['skill-list']);
+      if (t['exp-list']) buildList('exp-list', t['exp-list']);
+      if (t['prestasi-list']) buildList('prestasi-list', t['prestasi-list']);
+      if (t['cita-list']) buildList('cita-list', t['cita-list']);
+      if (t['port-list']) buildList('port-list', t['port-list']);
+
+      // Update analysis paragraphs if provided (use innerText for safe plain text)
+      if (t['analisis-calc']) document.getElementById('analisis-calc').innerHTML = '<strong>Perhitungan:</strong><br>' + t['analisis-calc'].replace(/^Perhitungan:\s*/i, '');
+      if (t['analisis-conc']) document.getElementById('analisis-conc').innerHTML = '<strong>Kesimpulan:</strong><br>' + t['analisis-conc'].replace(/^Kesimpulan:\s*/i, '');
+
+      // If there are label/value pairs (e.g., lbl-nama / val-nama), ensure both are set (already handled above)
+    }
+
+    // Initialize page in default language
+    document.addEventListener('DOMContentLoaded', () => {
+      setLang('id');
+    });
+  </script>
+</body>
+</html>
